@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/ranking.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Veterinaria Moka</title>
+</head>
+
+<body>
+    <div id="container-principal">
+
+        <header>
+            <div id="logo"></div>
+            <div id="titulo">Veterinaria Moka</div>
+            <div id="iniciar-sesion">
+                <a class="btn" id="btn-ingresar">Iniciar Sesión</a>
+                <a class="btn" id="btn-salir">Cerrar Sesión</a>
+                <a id="crear-cuenta" href="crear-cuenta.html">Crear cuenta</a>
+                <div id="usuario-conectado"></div>
+            </div>
+        </header>
+        <nav>
+            <a href="index.html">Inicio</a><a href="#">Productos</a><a href="#">Servicios</a><a href="#">Hotel</a><a href="blog.html">Blog</a><a href="acerca-de.html">Acerca De</a>
+        </nav>
+        <div id="menu-backend">
+            <div class="dropdown">
+                <a>Mascotas</a>
+                <ul class="dropdown-content">
+                    <li><a href="mascota-registro.html">Registro</a></li>
+                    <li><a href="mascota-listar.html">Listado</a></li>
+                    <li><a href="mascota-ranking.html">Ranking</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Citas</a>
+                <ul class="dropdown-content">
+                    <li><a href="mascota-citas-listar.html">Citas del día</a></li>
+                    <li><a href="mascota-citas-agendar.html">Agendar</a></li>
+                    <li><a href="usuario-citas-listar.html">Mis citas</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Expedientes</a>
+                <ul class="dropdown-content">
+                    <li><a href="expedientes-registro.html">Registro</a></li>
+                    <li><a href="expedientes-listar.html">Listado</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Hotel</a>
+                <ul class="dropdown-content">
+                    <li><a href="mascota-checkin.html">Check-in</a></li>
+                    <li><a href="mascota-checkout.html">Check-out</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Doctores</a>
+                <ul class="dropdown-content">
+                    <li><a href="doctor-registro.html">Registro</a></li>
+                    <li><a href="doctores-listar.html">Listado</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Usuarios</a>
+                <ul class="dropdown-content">
+                    <li><a href="usuario-registro.html">Registro</a></li>
+                    <li><a href="usuario-listar.html">Listado</a></li>
+                    <li><a href="usuario-perfil.html">Ver perfil</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Pagos</a>
+                <ul class="dropdown-content">
+                    <li><a href="pagos-agregar.html">Registro</a></li>
+                    <li><a href="pagos-listar.html">Listado</a></li>
+                    <li><a href="usuario-facturacion.html">Facturación</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div id="inicio-sesion">
+            <h2>Ranking mascotas</h2>
+            <a href="mascota-ranking-registro.html" class="btn centrar-boton">Listado de rankings</a>
+            <div id="ranking-registro">
+                <div id="registro-hotel">
+
+                    <form id="rating-form">
+                        <div>
+                            <label for="txt-nombre">Nombre de la mascota:</label>
+                            <input type="text" id="txt-mascota" />
+                        </div>
+                        <div>
+                            <label for="txt-fingreso">Fecha de ingreso:</label>
+                            <input type="date" id="txt-fingreso" />
+                        </div>
+                        <div>
+                            <label for="txt-fsalida">Fecha de salida:</label>
+                            <input type="date" id="txt-fsalida" />
+                        </div>
+                        <div>
+                            <label for="txt-padecimientos">Padecimientos:</label>
+                            <input type="text" id="txt-padecimientos" />
+                        </div>
+                        <div>
+                            <label for="txt-cuidados">Cuidados especiales:</label>
+                            <textarea id="txt-cuidados" cols="40" rows="5"></textarea>
+                        </div>
+                        <label for="text-valoracion">Valoración de mascota:</label>
+                        <div class="rating">
+                            <fieldset>
+                                <span class="star-cb-group">
+                                      <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+                                      <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+                                      <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+                                  </fieldset>
+                            <div>
+                                <label for="txt-comportamiento">Comentarios:</label>
+                                <textarea id="txt-comportamiento" cols="40" rows="5"></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="button" id="btn-guardar-ranking" class="btn">Guardar</button>
+                            </div>
+                            
+                        </div>
+                        </form>
+                </div>
+            </div>
+            <footer>
+    <p>En <b>Veterinaria Moka</b> es un gusto darle la mejor atención a su mascota, no dude en contactarnos.</p>
+    <p>Teléfono: 2256-5875</p>
+    <p>Correo electrónico: <a href="mailto:contacto@veterinariamoka.com">contacto@veterinariamoka.com</a></p>
+    <div id="imagenes-footer">
+        <a href="https://www.facebook.com" id="facebook"></a>
+        <a href="https://www.twitter.com" id="twitter"></a>
+        <a href="https://www.instagram.com" id="instagram"></a>
+    </div>
+
+</footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/servicio-general.js"></script>
+        <script src="js/ranking.js"></script>
+
+</body>
+
+</html>

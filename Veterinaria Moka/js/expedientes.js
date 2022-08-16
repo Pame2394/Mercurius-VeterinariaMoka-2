@@ -1,0 +1,51 @@
+let listaExpediente = [{
+        'nombre': 'Luna/F',
+        'raza': 'Pastor aleman',
+        'cedula': '1-1582-0016',
+        'telefono': '8896-1584',
+        'anotaciones': 'No tiene anotaciones',
+
+    },
+    {
+        'nombre': 'Coco/M',
+        'raza': 'Chihuahua',
+        'cedula': '1-5842-1132',
+        'telefono': '8527-7931',
+        'anotaciones': 'No acercarlo a otros perros',
+    },
+    {
+        'nombre': 'Kyra/F',
+        'raza': 'Pomeranian',
+        'cedula': '1-1796-0016',
+        'telefono': '8528-4714',
+        'anotaciones': 'Alergico a el talco',
+    },
+    {
+        'nombre': 'Toby/M',
+        'raza': 'Doberman',
+        'cedula': '7-2851-7947',
+        'telefono': '7018-9969',
+        'anotaciones': 'Perro agresivo',
+    },
+    {
+        'nombre': 'Pepe/M',
+        'raza': 'Chihuahua',
+        'cedula': '2-4485-3345',
+        'telefono': '8815-5514',
+        'anotaciones': 'No tiene anotaciones',
+    },
+    {
+        'nombre': 'Ema/F',
+        'raza': 'Poodle',
+        'cedula': '7-2548-8574',
+        'telefono': '8225-9969',
+        'anotaciones': 'Perro mayor de edad',
+    },
+    {
+        'nombre': 'Dogo/M',
+        'raza': 'Pitbull',
+        'cedula': '5-4944-2314',
+        'telefono': '6548-4747',
+        'anotaciones': 'No tiene anotaciones',
+    },
+];

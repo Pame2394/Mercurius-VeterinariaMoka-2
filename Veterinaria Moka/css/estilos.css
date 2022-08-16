@@ -1,0 +1,962 @@
+/*--ash-gray: #cad2c5;
+--dark-sea-green: #84a98c;
+--hookers-green: #52796f;
+--dark-slate-gray: #354f52;
+--charcoal: #2f3e46;
+*/
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #52796f;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 25px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 5px auto;
+}
+
+b {
+    font-weight: 700;
+}
+
+textarea {
+    resize: none;
+}
+
+header {
+    align-items: center;
+    background-color: #CAD2C5;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 110px;
+    color: #2F3E46;
+}
+
+header #logo {
+    width: 25%;
+    height: 75%;
+    background-image: url('../imagenes/logo-vet-moka.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header #titulo {
+    width: 50%;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header #iniciar-sesion {
+    width: 25%;
+    text-align: center;
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #354F52;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+}
+
+#crear-cuenta,
+#usuario-conectado {
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+    color: #354F52;
+    text-transform: uppercase;
+}
+
+#crear-cuenta:hover {
+    color: #ffffff;
+}
+
+#txt-correo-inicio {
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #2F3E46;
+    text-align: center;
+    color: #ffffff;
+}
+
+nav a {
+    background-color: #2F3E46;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    display: inline-block;
+    border-right: 1px solid #354F52;
+}
+
+nav a:last-child {
+    border: none;
+}
+
+.ocultar {
+    display: none !important;
+}
+
+#imagen-principal {
+    background-image: url('../imagenes/imagen-principal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+}
+
+#info-local {
+    padding: 40px 0;
+    background-color: #52796F;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+#servicios {
+    background-color: #354F52;
+    padding: 40px 5%;
+}
+
+#informacion {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#informacion div {
+    margin: 30px 20px;
+    background-color: #CAD2C5;
+    border-radius: 5px;
+    padding: 20px;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    box-shadow: 0 0 30px #333333;
+}
+
+#informacion div p {
+    margin: 20px;
+    text-align: center;
+}
+
+#informacion div a,
+#inicio-sesion #btn-registrar {
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav a:hover,
+.btn:hover {
+    color: #2F3E46;
+    background-color: #84A98C;
+    cursor: pointer;
+}
+
+#contacto {
+    background-color: #52796F;
+    padding: 40px 0;
+}
+
+#contacto #formulario {
+    margin: 40px auto 20px auto;
+    background-color: #CAD2C5;
+    background-image: url('../imagenes/imagen-formulario.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 240px;
+    border-radius: 5px;
+    width: 580px;
+    box-shadow: 0 0 30px #333333;
+}
+
+#contacto #formulario form {
+    display: inline-block;
+    margin: 20px 0 20px 250px;
+}
+
+#contacto #formulario div {
+    line-height: 30px;
+}
+
+#contacto #formulario input,
+#contacto #formulario textarea {
+    padding: 4px;
+    color: #2F3E46;
+    font-size: 14px;
+    width: 160px;
+}
+
+#contacto #formulario label {
+    width: 120px;
+    text-align: right;
+    display: inline-block;
+    font-size: 12px;
+}
+
+#contacto #formulario #txt-mensaje {
+    float: right;
+    margin-top: 5px;
+}
+
+#contacto #formulario button {
+    float: right;
+    margin: 10px 0px 0px 0px;
+    width: 170px;
+}
+
+footer {
+    background-color: #2F3E46;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 11px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#imagenes-footer a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+    margin: 10px 20px;
+}
+
+#facebook {
+    background-image: url('../imagenes/facebook.png');
+}
+
+#twitter {
+    background-image: url('../imagenes/twitter.png');
+}
+
+#instagram {
+    background-image: url('../imagenes/instagram.png');
+}
+
+th {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #354F52;
+    padding: 10px 0;
+}
+
+
+/* INICIO DE SESIÓN & REGISTRO DE USUARIO*/
+
+#inicio-sesion {
+    min-height: 400px;
+    padding: 40px 0;
+    background-color: #52796F;
+}
+
+#login,
+#registro,
+#perfil {
+    width: 320px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #CAD2C5;
+    text-align: center;
+    line-height: 40px;
+}
+
+#registro-hotel {
+    width: 480px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #CAD2C5;
+    text-align: center;
+    line-height: 40px;
+}
+
+#facturacion {
+    width: 540px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #CAD2C5;
+    text-align: center;
+    line-height: 40px;
+}
+
+#facturacion label {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+}
+
+#tbl-facturacion {
+    width: 100%;
+}
+
+#tbl-facturacion td {
+    text-align: right;
+    padding: 4px;
+}
+
+#listar-usuarios {
+    margin: 40px auto;
+    width: 80%;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #CAD2C5;
+    text-align: center;
+    line-height: 40px;
+}
+
+#registro td {
+    text-align: left;
+    padding: 0 5px;
+}
+
+#login label,
+#registro label,
+#registro-hotel label,
+.info-principal label {
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.info-principal label {
+    width: 160px;
+}
+
+#login label {
+    width: 80px;
+}
+
+#registro label {
+    width: 140px;
+}
+
+#registro-hotel label {
+    width: 180px;
+}
+
+#login #btn-login,
+#registro #btn-guardar,
+#registro #btn-pagar,
+#registro-hotel #btn-guardar {
+    margin-top: 30px;
+}
+
+#inicio-sesion #btn-registrar {
+    display: block;
+    width: 300px;
+}
+
+.input-error {
+    border: 2px solid #ff0000;
+}
+
+#tbl-usuario-registrado {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#tbl-usuarios {
+    width: 100%;
+}
+
+#tbl-usuarios th {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#tbl-usuarios td {
+    border-bottom: 1px solid #52796F;
+}
+
+.btn-usuario,
+.btn-eliminar {
+    margin: 0 2px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.btn-usuario {
+    background-color: #354F52;
+}
+
+.btn-usuario:hover {
+    background-color: #84A98C;
+    color: #2F3E46;
+}
+
+.btn-eliminar {
+    background-color: #a33c3c;
+}
+
+.btn-eliminar:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.btn-usuario:hover,
+.btn-eliminar:hover {
+    cursor: pointer;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 150px;
+}
+
+#registro-hotel #label-observaciones {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#num-habitacion {
+    width: 40px;
+}
+
+.formulario-inline label,
+.formulario-inline input {
+    display: inline !important;
+    margin-top: 20px;
+}
+
+.formulario-inline input {
+    margin-right: 5px;
+}
+
+.center-text {
+    text-align: center !important;
+}
+
+
+/* MENU BACKEND*/
+
+#menu-backend {
+    background-color: #84a98c;
+    text-align: center;
+    border-bottom: 1px solid #354F52;
+}
+
+#menu-backend div {
+    display: inline-block;
+    border-right: 1px solid #354F52;
+    margin-left: -4px;
+}
+
+#menu-backend div:last-child {
+    border: none;
+}
+
+#menu-backend a {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #2F3E46;
+    padding: 12px 4px;
+    display: block;
+    width: 120px;
+    text-decoration: none;
+}
+
+#menu-backend a:hover {
+    color: #ffffff;
+    background-color: #354f52;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 8px 12px #2F3E46;
+    ;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    background-color: #84A98C;
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid #2F3E46;
+}
+
+.centrar-boton {
+    width: 200px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+#registro select {
+    padding: 2px 0;
+    width: 150px;
+}
+
+.bloque1,
+.bloque2,
+.bloque3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bloque1 {
+    margin-top: 20px;
+}
+
+.bloque1-derecha,
+.bloque2-derecha,
+.bloque3-derecha {
+    width: 50%;
+    text-align: justify;
+}
+
+
+/*BLOG*/
+
+#preview-blog {
+    padding: 2%;
+    color: white;
+    background-color: #2F3E46;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-top: 40px;
+    box-shadow: 8px 8px #8fbc8f6b;
+    width: 18%;
+    text-align: center;
+}
+
+#informarcion-blog {
+    padding: 2%;
+    width: 100%;
+    background-color: rgba(255, 255, 255);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 8px 8px #8fbc8f6b;
+}
+
+.informacion-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.informacion-text {
+    font-size: 12px;
+}
+
+
+/*card-css*/
+
+#blog-cards {
+    display: flex;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 40%;
+    margin: auto;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.img-blog {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 40px;
+}
+
+.card-line-between {
+    margin-left: 2%;
+    width: 12%;
+    background-color: #000000ba;
+    height: 6px;
+}
+
+.card-information {
+    margin: 40px;
+    text-align: justify;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.blog-section {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    height: 100px;
+}
+
+.card-information a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px;
+}
+
+.tbl-info-doctores td,
+.tbl-lista-citas td,
+.tbl-lista-mascotas td,
+.tbl-lista-expediente td,
+#tbl-observacion-registrada td {
+    border-bottom: 1px solid #52796F;
+}
+
+.tbl-info-doctores thead tr th,
+.tbl-lista-citas thead tr th,
+.tbl-lista-expediente thead tr th,
+.tbl-lista-mascotas thead tr th {
+    padding: 10px 1%;
+}
+
+.tbl-info-doctores th,
+.tbl-lista-citas th,
+.tbl-lista-mascotas th {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tbl-info-doctores tbody tr td,
+.tbl-lista-citas tbody tr td,
+.tbl-lista-expediente tbody tr td,
+.tbl-lista-mascotas tbody tr td {
+    padding: 10px 1%;
+    text-align: center;
+}
+
+.tbl-lista-mascotas,
+.tbl-lista-citas,
+.tbl-info-doctores,
+.tbl-lista-expediente {
+    width: 100%;
+}
+
+#registro-observaciones {
+    width: 80%!important;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #CAD2C5;
+    text-align: center;
+    line-height: 40px;
+}
+
+#tbl-observacion-registrada {
+    margin: 0 auto;
+    width: 100%!important;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: auto;
+}
+
+#tbl-observacion-registrada td:first-child {
+    width: 150px;
+}
+
+#btn-guardar-observaciones {
+    position: relative;
+    right: 0px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+#gato-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#observaciones-form label {
+    width: 100%;
+    text-align: center;
+}
+
+#observaciones-form textarea {
+    border: 1px solid #2F3E46;
+    border-radius: 5px;
+    padding: 4px;
+    color: #2F3E46;
+    font-size: 14px;
+    width: 100%;
+    height: 14em;
+    resize: none;
+}
+
+
+/*rate-star*/
+
+.star-cb-group {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.star-cb-group * {
+    font-size: 24px;
+}
+
+.star-cb-group>input {
+    display: none;
+}
+
+.star-cb-group>input+label {
+    display: inline-block;
+    text-indent: 9999px;
+    width: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 28px !important;
+}
+
+.star-cb-group>input+label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "☆";
+    color: #888;
+}
+
+.star-cb-group>input:checked~label:before,
+.star-cb-group>input+label:hover~label:before,
+.star-cb-group>input+label:hover:before {
+    content: "★";
+    color: rgb(255, 208, 0);
+    text-shadow: 0 0 1px #333;
+}
+
+.star-cb-group>.star-cb-clear+label {
+    text-indent: -9999px;
+    width: 0.5em;
+    margin-left: -0.5em;
+}
+
+.star-cb-group>.star-cb-clear+label:before {
+    width: 0.5em;
+}
+
+.star-cb-group:hover>input+label:before {
+    content: "☆";
+    color: #888;
+    text-shadow: none;
+}
+
+.star-cb-group:hover>input+label:hover~label:before,
+.star-cb-group:hover>input+label:hover:before {
+    content: "★";
+    color: rgb(255, 208, 0);
+    text-shadow: 0 0 1px #333;
+}
+
+.titulo-registro-doctor {
+    margin-top: 10px;
+}
+
+.registro-doctor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    width: 320px;
+    background-color: #CAD2C5;
+    border-radius: 5px;
+}
+
+.registro-doctor input,
+select {
+    margin-bottom: 5px;
+}
+
+.registro-doctor #Registrar {
+    background-color: #354F52;
+    color: #ffff;
+    text-transform: uppercase;
+    margin: 20px;
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 130px;
+}
+
+.registro-doctor #Registrar:hover {
+    color: #2F3E46;
+    background-color: #84A98C;
+    cursor: pointer;
+}
+
+.registro-mascotas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    background-color: #CAD2C5;
+    border-radius: 5px;
+}
+
+.registro-mascotas input,
+select {
+    margin-bottom: 5px;
+}
+
+.registro-mascotas #Registrar {
+    background-color: #354F52;
+    color: #ffff;
+    text-transform: uppercase;
+    margin: 20px;
+    cursor: pointer;
+    border: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 130px;
+}
+
+.registro-mascotas #Registrar:hover {
+    color: #2F3E46;
+    background-color: #84A98C;
+    cursor: pointer;
+}
+
+.registro-mascotas label {
+    width: 150px !important;
+}
+
+.mascota-info-principal {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.imagen-perfil {
+    background-image: url('../imagenes/perfil-mascota.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.izquierda,
+.derecha {
+    background-color: #CAD2C5;
+    width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#form-derecha input,
+#form-izquierda input {
+    margin-top: 15px;
+}
+
+.calificacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/*rate-star*/
+
+#rating-form {
+    text-align: center;
+}
+
+.rating {
+    margin-top: 4%;
+    font-size: 4em;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    transition: all 0.2s;
+    display: inline-block;
+    width: 30px;
+}
+
+.rating {
+    color: #b39907;
+}
+
+.mascota-btn {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    text-align: center;
+}
+
+#form-derecha {
+    margin-bottom: 25px;
+}

@@ -1,0 +1,93 @@
+@media only screen and (max-width: 900px) {
+    #menu-backend div {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    #menu-backend a {
+        width: 100%;
+    }
+    .dropdown-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        padding: 0;
+    }
+    header #titulo {
+        font-size: 28px;
+    }
+    #container-principal {
+        min-width: auto;
+    }
+    #informacion {
+        display: block;
+    }
+    #informacion div {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header #iniciar-sesion {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    header #logo {
+        margin-left: 10px;
+    }
+    header #titulo {
+        font-size: 22px;
+    }
+    header div {
+        display: block;
+    }
+    nav {
+        padding: 0;
+    }
+    nav a {
+        display: block;
+        border-right: none;
+        border-bottom: 1px solid #354F52;
+        padding: 15px 0;
+    }
+    #info-local {
+        padding: 50px;
+        font-size: 16px;
+    }
+    footer p {
+        padding: 0 20px;
+    }
+    #contacto #formulario {
+        width: 60%;
+        background-position: center top;
+        background-image: url('../imagenes/imagen-formulario-responsive.jpg');
+        background-size: contain;
+        padding-top: 50%;
+    }
+    #contacto #formulario div {
+        line-height: 20px;
+    }
+    #contacto #formulario form {
+        display: block;
+        padding: 20px;
+        margin: 0;
+    }
+    #contacto #formulario label {
+        display: block;
+        width: auto;
+        margin: 0;
+        text-align: center;
+    }
+    #contacto #formulario input,
+    #contacto #formulario textarea {
+        padding: 5px 0;
+        width: 100%;
+    }
+    #contacto #formulario button {
+        float: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Veterinaria Moka</title>
+</head>
+
+<body>
+    <div id="container-principal">
+
+        <header>
+            <div id="logo"></div>
+            <div id="titulo">Veterinaria Moka</div>
+            <div id="iniciar-sesion">
+                <a class="btn" id="btn-ingresar">Iniciar Sesión</a>
+                <a class="btn" id="btn-salir">Cerrar Sesión</a>
+                <a id="crear-cuenta" href="crear-cuenta.html">Crear cuenta</a>
+                <div id="usuario-conectado"></div>
+            </div>
+        </header>
+        <nav>
+            <a href="index.html">Inicio</a><a href="#">Productos</a><a href="#">Servicios</a><a href="#">Hotel</a><a href="blog.html">Blog</a><a href="acerca-de.html">Acerca De</a>
+        </nav>
+        <div id="menu-backend">
+            <div class="dropdown">
+                <a>Mascotas</a>
+                <ul class="dropdown-content">
+                    <li><a href="mascota-registro.html">Registro</a></li>
+                    <li><a href="mascota-listar.html">Listado</a></li>
+                    <li><a href="mascota-ranking.html">Ranking</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Citas</a>
+                <ul class="dropdown-content">
+                    <li><a href="mascota-citas-listar.html">Citas del día</a></li>
+                    <li><a href="mascota-citas-agendar.html">Agendar</a></li>
+                    <li><a href="usuario-citas-listar.html">Mis citas</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Expedientes</a>
+                <ul class="dropdown-content">
+                    <li><a href="expedientes-registro.html">Registro</a></li>
+                    <li><a href="expedientes-listar.html">Listado</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Hotel</a>
+                <ul class="dropdown-content">
+                    <li><a href="mascota-checkin.html">Check-in</a></li>
+                    <li><a href="mascota-checkout.html">Check-out</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Doctores</a>
+                <ul class="dropdown-content">
+                    <li><a href="doctor-registro.html">Registro</a></li>
+                    <li><a href="doctores-listar.html">Listado</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Usuarios</a>
+                <ul class="dropdown-content">
+                    <li><a href="usuario-registro.html">Registro</a></li>
+                    <li><a href="usuario-listar.html">Listado</a></li>
+                    <li><a href="usuario-perfil.html">Ver perfil</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a>Pagos</a>
+                <ul class="dropdown-content">
+                    <li><a href="pagos-agregar.html">Registro</a></li>
+                    <li><a href="pagos-listar.html">Listado</a></li>
+                    <li><a href="usuario-facturacion.html">Facturación</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="imagen-principal"></div>
+        <div id="info-local">
+            <h2>Información de la veterinaria</h2>
+            <p>Horarios de atención: Lunes a Viernes de 8am a 6pm</p>
+            <p>Emergencias médicas: 24 horas al día 7 días de la semana.</p>
+            <p>Teléfono para citas: 2256-5875 | Teléfono para emergencias: 2256-0911</p>
+            <p>Dirección: Centro Comercial Plaza Atlantis, San Rafael de Escazú</p>
+        </div>
+        <div id="servicios">
+            <h2>Nuestros servicios</h2>
+
+            <div id="informacion">
+                <div>
+                    <h3>CONSULTAS GENERALES</h3>
+                    <p>Consulte sobre las opciones de revisiones físicas para determinar el estado de salúd de su mascota.</p>
+                    <a class="btn">Haga click aquí</a>
+                </div>
+                <div>
+                    <h3>VACUNACIONES</h3>
+                    <p>Consulte sobre las opciones de servicios de vacunación para la protección de su mascota.</p>
+                    <a class="btn">Haga click aquí</a>
+                </div>
+                <div>
+                    <h3>GROOMING</h3>
+                    <p>Ofrecemos baños, cortes de pelo, corte de uñas y más opciones de limpieza para consentir a tu mascota.</p>
+                    <a class="btn">Haga click aquí</a>
+                </div>
+            </div>
+
+        </div>
+        <div id="contacto">
+            <h2>Contacto</h2>
+            <div id="formulario">
+                <form>
+                    <div>
+                        <label for="txt-nombre">Nombre: </label>
+                        <input type="text" id="txt-nombre">
+                    </div>
+                    <div>
+                        <label for="txt-correo">Correo electrónico:</label>
+                        <input type="email" id="txt-correo">
+                    </div>
+                    <div>
+                        <label for="txt-telefoo">Teléfono: </label>
+                        <input type="tel" id="txt-telefono">
+                    </div>
+                    <div>
+                        <label for="txt-asunto">Asunto: </label>
+                        <input type="text" id="txt-asunto">
+                    </div>
+                    <div>
+                        <label for="txt-mensaje">Mensaje: </label>
+                        <textarea id="txt-mensaje" rows="5" cols="20"></textarea>
+                    </div>
+                    <div>
+                        <button type="button" id="enviar" class="btn">Enviar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>En <b>Veterinaria Moka</b> es un gusto darle la mejor atención a su mascota, no dude en contactarnos.</p>
+            <p>Teléfono: 2256-5875</p>
+            <p>Correo electrónico: <a href="mailto:contacto@veterinariamoka.com">contacto@veterinariamoka.com</a></p>
+            <div id="imagenes-footer">
+                <a href="https://www.facebook.com" id="facebook"></a>
+                <a href="https://www.twitter.com" id="twitter"></a>
+                <a href="https://www.instagram.com" id="instagram"></a>
+            </div>
+
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/usuarios.js"></script>
+    <script src="js/formulario-index.js"></script>
+
+</body>
+
+</html>

@@ -30,6 +30,12 @@ const llenarTabla = () => {
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 
+        let btnPerfil = document.createElement('button');
+        btnPerfil.textContent = 'Ver Perfil';
+        btnPerfil.type = 'button';
+        btnPerfil.classList.add('btn-usuario');
+
+        tdAcciones.appendChild(btnPerfil);
         tdAcciones.appendChild(btnEditar);
         tdAcciones.appendChild(btnEliminar);
 
@@ -48,7 +54,10 @@ const llenarTabla = () => {
                 }
             })
         });
-
+        btnPerfil.addEventListener('click', () => {
+            localStorage.setItem('usuarioPerfil', JSON.stringify(usuarioTemp));
+            window.location.href = 'usuario-perfil.html';
+        });
     });
 };
 

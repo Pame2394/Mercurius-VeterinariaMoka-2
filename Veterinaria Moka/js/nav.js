@@ -16,6 +16,7 @@ const mostrarOpciones = () => {
     } else {
         botonIngresar.classList.add('ocultar');
         botonCrearCuenta.classList.add('ocultar');
+        document.getElementById('usuario-conectado').append(usuarioConectado.nombre);
         switch (usuarioConectado.rol) {
             case 1:
                 opcionesNav[7].classList.add('ocultar');
@@ -122,9 +123,6 @@ const cerrarSesion = async() => {
 };
 
 mostrarOpciones();
+
 btnIngresar.addEventListener('click', iniciarSesion)
 btnSalir.addEventListener('click', cerrarSesion)
-
-if (usuarioConectado != null) {
-    document.getElementById('usuario-conectado').append(usuarioConectado.nombre);
-}

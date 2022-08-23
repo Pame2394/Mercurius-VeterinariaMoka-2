@@ -7,7 +7,8 @@ const schemaUsuario = mongoose.Schema({
     "correo": { type: String, required: true, unique: true },
     "direccion": { type: String, required: true },
     "clave": { type: String, required: true },
-    "rol": { type: Number, required: true }
+    "rol": { type: Number, required: true },
+    "foto": { type: String, required: true }
 });
 
 let modelo = mongoose.model('Usuario', schemaUsuario, 'usuarios');

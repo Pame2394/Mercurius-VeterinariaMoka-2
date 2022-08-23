@@ -5,6 +5,7 @@ const inputCorreo = document.getElementById('txt-correo');
 const inputDireccion = document.getElementById('txt-direccion');
 const inputClave1 = document.getElementById('txt-clave1');
 const inputClave2 = document.getElementById('txt-clave2');
+const inputFoto = document.getElementById('foto-usuario')
 const btnGuardar = document.getElementById('btn-guardar');
 
 const validar = () => {
@@ -74,7 +75,8 @@ const obtenerDatos = () => {
         'correo': inputCorreo.value,
         'direccion': inputDireccion.value,
         'clave': inputClave1.value,
-        'rol': 2
+        'rol': 2,
+        'foto': inputFoto.src
     };
     registrarDatos('registrar-usuario', usuario, 'index.html');
 

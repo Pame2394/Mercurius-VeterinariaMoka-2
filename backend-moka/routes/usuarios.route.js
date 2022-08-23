@@ -11,7 +11,8 @@ router.post('/registrar-usuario', (req, res) => {
         "correo": req.body.correo,
         "direccion": req.body.direccion,
         "clave": req.body.clave,
-        "rol": req.body.rol
+        "rol": req.body.rol,
+        "foto": req.body.foto
     });
 
     usuarioNuevo.save(error => {
@@ -46,8 +47,8 @@ router.get('/listar-usuarios', (req, res) => {
 });
 
 router.delete('/eliminar-usuario', (req, res) => {
-	Usuario.deleteOne({ _id: req.body._id }, error=>{
-	        if (error) {
+    Usuario.deleteOne({ _id: req.body._id }, error => {
+        if (error) {
             res.json({
                 "msj": "El usuario no se pudo eliminar",
                 error
@@ -57,7 +58,7 @@ router.delete('/eliminar-usuario', (req, res) => {
                 "msj": "Usuario eliminado correctamente",
             });
         }
-	});
+    });
 });
 
 module.exports = router;

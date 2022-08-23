@@ -64,11 +64,11 @@ const llenarTabla = () => {
         });
 
         //Creación de un input
-        let inputGenerico = document.createElement('input');
-        inputGenerico.type = 'text';
-        inputGenerico.placeholder = 'Jhon Doe';
+        //let inputGenerico = document.createElement('input');
+       // inputGenerico.type = 'text';
+       // inputGenerico.placeholder = 'Jhon Doe';
 
-        fila.insertCell().appendChild(inputGenerico);
+       // fila.insertCell().appendChild(inputGenerico);//
 }});
 };
 

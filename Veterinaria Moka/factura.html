@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos-factura.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Veterinaria Moka</title>
+</head>
+
+<body>
+    <div id="container-principal">
+
+
+
+
+
+        <img src="/imagenes/moka-profile.png" class="centrar-boton">
+
+        <h2>VETERINARIA MOKA</h2>
+        <table id="tbl-factura">
+            <thead>
+                <tr>
+                    <th colspan="2">
+
+                        FACTURA POR SERVICIOS
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <p>Factura #37846281</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <p>Veterinaria Moka S.A. Ced. Jurídica 3-3010-6607</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Fecha: Agosto 26, 2022 </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Nombre:</b></td>
+                    <td id="nombre-factura"></td>
+                </tr>
+                <tr>
+                    <td><b>Teléfono:</b></td>
+                    <td id="telefono-factura"></td>
+                </tr>
+                <tr>
+                    <td><b>Correo electrónico:</b></td>
+                    <td id="correo-factura"></td>
+                </tr>
+                <tr>
+                    <td><b>Monto:</b></td>
+                    <td id="monto-factura"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p style="text-align: center;">¡GRACIAS POR SU COMPRA!</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/servicio-general.js"></script>
+    <script src="js/factura.js"></script>
+</body>
+
+</html>

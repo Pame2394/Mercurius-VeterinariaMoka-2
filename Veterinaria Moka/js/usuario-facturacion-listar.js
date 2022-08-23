@@ -28,6 +28,12 @@ const llenarTabla = () => {
         btnEliminar.type = 'button';
         btnEliminar.classList.add('btn-eliminar');
 
+        let btnFactura = document.createElement('button');
+        btnFactura.textContent = 'Factura';
+        btnFactura.type = 'button';
+        btnFactura.classList.add('btn-usuario');
+
+        tdAcciones.appendChild(btnFactura);
         tdAcciones.appendChild(btnEditar);
         tdAcciones.appendChild(btnEliminar);
 
@@ -47,7 +53,10 @@ const llenarTabla = () => {
                 }
             })
         });
-
+        btnFactura.addEventListener('click', () => {
+            localStorage.setItem('datosFactura', JSON.stringify(facturacionTemp));
+            window.location.href = 'factura.html';
+        });
     });
 };
 

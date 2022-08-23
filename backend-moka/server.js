@@ -49,3 +49,5 @@ app.use('/api', require('./routes/usuarios.route'));
 app.use('/api', require('./routes/checkin.route'));
 app.use('/api', require('./routes/checkout.route'));
 app.use('/api', require('./routes/facturacion.route'));
+app.use('/api', require('./routes/mascota-registro.route'));
+app.use('/api', require('./routes/doctor-registro.route'))

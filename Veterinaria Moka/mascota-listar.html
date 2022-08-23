@@ -10,26 +10,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mascotas-listar.css">
     <link rel="stylesheet" href="css/responsive.css">
+
     <title>Veterinaria Moka</title>
+
 </head>
 
 <body>
     <div id="container-principal">
-
         <header>
             <div id="logo"></div>
             <div id="titulo">Veterinaria Moka</div>
             <div id="iniciar-sesion">
                 <a class="btn" id="btn-ingresar">Iniciar Sesión</a>
                 <a class="btn" id="btn-salir">Cerrar Sesión</a>
-                <a id="crear-cuenta" href="crear-cuenta.html">Crear cuenta</a>
-                <div id="usuario-conectado"></div>
+                <a id="crear-cuenta" href="usuario-registro.html">Crear cuenta</a>
             </div>
         </header>
         <nav>
             <a href="index.html">Inicio</a><a href="#">Productos</a><a href="#">Servicios</a><a href="#">Hotel</a><a href="blog.html">Blog</a><a href="acerca-de.html">Acerca De</a>
         </nav>
+
+
         <div id="menu-backend">
             <div class="dropdown">
                 <a>Mascotas</a>
@@ -85,22 +88,32 @@
                 </ul>
             </div>
         </div>
-
-
-
-
         <div id="inicio-sesion">
             <h2>Lista de máscotas</h2>
             <section id="sct-tabla">
                 <div id="listar-usuarios">
                     <table id="tbl-lista-mascotas" class="tbl-lista-mascotas">
                         <thead>
+                            
+                            <tr>
+                                <th><label for="txt-filtro">Filtro:</label> <input type="text" id="txt-filtro"></th>
+                                <th></th>
+                                <th></th>
+                                <th><button type="button" id="btn-agregar" class="btn-agregar">Agregar</button></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
                             <tr>
                                 <th>Nombre</th>
                                 <th>Edad</th>
                                 <th>Raza</th>
+                                <th>Color</th>
                                 <th>Sexo</th>
+                                <th>Padecimientos</th>
                                 <th>Acciones</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -128,12 +141,11 @@
 
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/nav.js"></script>
     <script src="js/servicio-general.js"></script>
-    <script src="js/mascotas.js"></script>
     <script src="js/mascotas-listar.js"></script>
+    <script src="js/nav.js"></script>
 
 </body>
 

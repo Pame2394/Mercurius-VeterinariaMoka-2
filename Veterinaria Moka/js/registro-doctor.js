@@ -86,29 +86,17 @@ const validar = () => {
 //función obtener datos
 
 const obtenerDatos = () => {
-    let registroDoctor = {
+    let doctor = {
         "nombre": inputNombre.value,
         "cedula": inputCedula.value,
         "correo": inputCorreo.value,
         "direccion": inputDireccion.value,
         "experiencia": inputExperiencia.value,
         "genero": selectGenero.value,
-        "fotografia": inputImagen,
+        "fotografia": inputImagen.value
     };
 
-    console.log(registroDoctor);
-
-    //funcion alert exito//
-
-
-    Swal.fire({
-        "icon": "success",
-        "title": "Datos correctos",
-        "text": "Su registro ha sido exitoso",
-        "confirmButtonText": "Entendido"
-    }).then(() => {
-        window.location.href = "";
-    });
+    registrarDatos("registro-doctor", doctor, "doctores-listar.html");
 
 };
 

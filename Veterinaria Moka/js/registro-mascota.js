@@ -83,27 +83,17 @@ const validar = () => {
 
 const obtenerDatos = () => {
     let mascota = {
-        "nombre": inputNombre.value,
-        "anos": inputAnos.value,
-        "raza": inputRaza.value,
-        "color": inputColor.value,
-        "sexo": selectSexo.value,
-        "padecimientos": inputPadecimientos.value,
+        "nombre" : inputNombre.value,
+        "edad" : inputAnos.value,
+        "raza" : inputRaza.value,
+        "color" : inputColor.value,
+        "imagen" : inputImagen.value,
+        "sexo" : selectSexo.value,
+        "padecimientos" : inputPadecimientos.value,
+
     };
 
-    console.log(mascota);
-
-    //funcion alert exito//
-
-
-    Swal.fire({
-        "icon": "success",
-        "title": "Datos correctos",
-        "text": "Su registro ha sido exitoso",
-        "confirmButtonText": "Entendido"
-    }).then(() => {
-        window.location.href = "mascota-registrada.html";
-    });
+    registrarDatos("registrar-mascota", mascota, "mascota-listar.html");
 
 };
 

@@ -1,17 +1,28 @@
 const informacionTabla = document.querySelector('#tbl-lista-mascotas tbody');
+const inputFiltro = document.getElementById("txt-filtro");
 
+let mascotasListar = [];
 
-const llenarTabla = () => {
+const llenarArregloMascota = async()=>{
+    mascotasListar = await getDatos("mascotas-listar");
+    llenarTabla();
+};
+
+function llenarTabla() {
     informacionTabla.innerHTML = ''; //Limpia el contenido que tiene el cuerpo de la tabla
 
-    //Para cada usuario que se encuentre dentro de la colección de usuarios
-    mascotasListar.forEach(usuarioTemp => {
-        let fila = informacionTabla.insertRow(); //Crea una fila dentro de la tabla y se almacena en una variable
 
-        fila.insertCell().textContent = usuarioTemp.nombre;
-        fila.insertCell().textContent = usuarioTemp.edad;
-        fila.insertCell().textContent = usuarioTemp.raza;
-        fila.insertCell().textContent = usuarioTemp.sexo;
+    //Para cada usuario que se encuentre dentro de la colección de usuarios
+    mascotasListar.forEach(mascotaTemp => {
+        if (mascotaTemp.nombre.toLowerCase().includes(inputFiltro.value.toLowerCase())) {
+            let fila = informacionTabla.insertRow(); //Crea una fila dentro de la tabla y se almacena en una variable //Crea una fila dentro de la tabla y se almacena en una variable
+
+        fila.insertCell().textContent = mascotaTemp.nombre;
+        fila.insertCell().textContent = mascotaTemp.edad;
+        fila.insertCell().textContent = mascotaTemp.raza;
+        fila.insertCell().textContent = mascotaTemp.color;
+        fila.insertCell().textContent = mascotaTemp.sexo;
+        fila.insertCell().textContent = mascotaTemp.padecimientos;
 
         //Creación de la celda para los botones
         let tdAcciones = fila.insertCell();
@@ -35,7 +46,6 @@ const llenarTabla = () => {
 
         //Agregar el botón de editar y eliminar a la celda de acciones
         tdAcciones.appendChild(btnPerfil);
-
         tdAcciones.appendChild(btnEditar);
         tdAcciones.appendChild(btnEliminar);
 
@@ -54,15 +64,38 @@ const llenarTabla = () => {
                         '¡Registro eliminado!',
                         'El usuario fue borrado',
                         'success'
-                    )
+                    );
                 }
-            })
+            });
         });
-        btnPerfil.addEventListener('click', () => {
-            window.location.href = 'mascota-perfil.html';
-        });
+
+
+        //Creación de un input
+        let inputGenerico = document.createElement('input');
+        inputGenerico.type = 'text';
+        inputGenerico.placeholder = 'Jhon Doe';
+
+        fila.insertCell().appendChild(inputGenerico);
+    }
     });
-};
+};  
 
+llenarArregloMascota();
+// let btnMostrarOcultar = document.getElementById('btn-mostrar');
 
-llenarTabla();
+// btnMostrarOcultar.addEventListener('click', () => {
+//     if (tabla.classList.contains('ocultar')) {
+//         btnMostrarOcultar.textContent = 'Ocultar lista';
+//         tabla.classList.remove('ocultar');
+//     } else {
+//         btnMostrarOcultar.textContent = 'Mostrar lista';
+//         tabla.classList.add('ocultar');
+//     }
+//     //tabla.classList.toggle('ocultar');
+
+// });
+
+inputFiltro.addEventListener('keyup', llenarTabla);
+document.getElementById('btn-agregar').addEventListener('click', () => {
+    window.location.href = 'mascota-registro.html';
+});
